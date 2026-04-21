@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body onload="startQuiz()">
+
+    <div class="quizContainer">
+      <div class="header">
+        <h1 class="quizTitle">Frontened Quiz</h1>
+
+        <div class="timerBox">
+          Timer:
+          <span class="timerValue" id="timer"></span>s
+        </div>
+        <!-- <p>User: Muzzammil Ahmed</p> -->
+      </div>
+
+      <div class="body">
+        <h1 class="questionText" id="questionElement"></h1>
+
+        <div class="options">
+          <ul class="optionsList" id="optionElement"></ul>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p class="progressText" id="quizProgress"></p>
+
+        <button disabled class="nextBtn" id="nextQuesBtn" onclick="nextQuestion()">Next</button>
+      </div>
+    </div>
+
+    <div class="reportCardContainer">
+      <h1 class="reportTitle">Report Card</h1>
+
+      <p class="reportText">
+        Total Questions: <span class="reportValue" id="totalQuestions"></span>
+      </p>
+
+      <p class="reportText">
+        Correct Answers: <span class="reportValue" id="correctAnswers"></span>
+      </p>
+
+      <p class="reportText">Wrong Answers: <span class="reportValue" id="wrongAnswers"></span></p>
+
+      <p class="reportText">Percentage: <span class="reportValue" id="percentage"></span>%</p>
+
+      <p class="reportText">Grade: <span class="reportValue" id="grade"></span></p>
+
+      <button class="restartBtn" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+  </body>
+  <script src="./script.js"></script>
+</html>
